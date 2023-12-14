@@ -3,6 +3,7 @@ body {
     font-family: sans-serif;
     color: #f5f5f5;
     line-height: 1.5em;
+    min-height: 100vh;
 }
 .intro-page {
     text-align: center;
@@ -23,54 +24,30 @@ h1 {
 .avatar {
     border-radius: 50%;
     height: auto;
-    width: 300px;
+    width: 100%; /* Make the width responsive */
+    max-width: 300px; /* Limit the maximum width */
 }
 
 .linkimage {
     height: auto;
-    width: 80px;
+    width: 80%;
+    max-width: 80px;
 }
 
 .socials {
     list-style: none;
     margin: 0;
     padding: 3em 0 0 0;
-    
+    height: 100vh;
 }
 
-li {
-    text-align: -webkit-match-parent;
-    display: list-item;
-    margin: 0 0.5em;
-}
-a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: underline;
-}
-.socials li img {
-    vertical-align: middle;
-    width: 3em;
-}
-.socials li {
-    display: inline-block;
-}
-.socials li a {
-    display: block;
-    padding: 1em;
-    border-radius: 50%;
-    transition: background-color, .5s;
-}
-img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .avatar {
+        width: 80%; /* Reduce the width on small screens */
+    }
 
-ul {
-    display: block; 
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+    .linkimage {
+        width: 60%; /* Reduce the width on small screens */
+    }
 }
