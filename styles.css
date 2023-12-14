@@ -1,3 +1,26 @@
+/* Change this file to fill exactly the size of the viewport of device, without any scrolling, with the .socials icons horizontally aligned */
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.intro-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -9,12 +32,12 @@ body {
     line-height: 1.5em;
 }
 
-.intro-page {
+/* .intro-page {
     text-align: center;
     padding: 10em 0 5em 0;
     background-color: #2a2a2a;
     flex-grow: 1; /* This will make the intro-page section grow to take up available space */
-}
+} */
 
 h1 {
     display: block;
@@ -39,7 +62,7 @@ h1 {
     max-width: 80px;
 }
 
-.socials {
+/* .socials {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +71,7 @@ h1 {
     padding: 3em 0 0 0;
     height: 100vh;
     flex-direction: horizontal;
-}
+} */
 
 @media (max-width: 600px) {
     .avatar {
